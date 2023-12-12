@@ -7,12 +7,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: exemple of invalid command
-        run: ecko Hello, world! build failed.
+      - name: create an artifact for reuse
+        run: echo "Full featured artifact" > build-result.txt
         
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: step do deploy
-        run: echo Hello, world! deploy.
+      - name: use of artifact created
+        run: ls build-result.txt
