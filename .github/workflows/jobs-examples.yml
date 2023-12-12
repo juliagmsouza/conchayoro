@@ -7,8 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: step do build
-        run: echo Hello, world! build.
+      - name: exemple of invalid command
+        run: ecko Hello, world! build failed.
         
   deploy:
     runs-on: ubuntu-latest
