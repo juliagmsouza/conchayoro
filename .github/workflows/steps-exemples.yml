@@ -3,15 +3,10 @@ on:
   push
 
 jobs:
-  marketplace:
+  jobx:
     runs-on: ubuntu-latest
     steps:
       - name: configuração do node (pesquisar no marketplace...)
-      - uses: nodenv/actions/node-version@v3
-        id: nodenv
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '${{ steps.nodenv.outputs.node-version }}'
-      - run: node -v
+        uses: nodenv/actions/node-version@v3
       - name: verification of node version
         run: node --version
