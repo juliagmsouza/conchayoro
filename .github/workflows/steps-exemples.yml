@@ -1,0 +1,16 @@
+name: jobs examples
+on:
+  push
+
+jobs:
+  jobx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: configuração do node (pesquisar no marketplace...)
+      - uses: nodenv/actions/node-version@v3
+        id: nodenv
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '${{ steps.nodenv.outputs.node-version }}'
+      - name: verification of node version
+        run: node --version
