@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: configuração do node (pesquisar no marketplace...)
-        uses: nodenv/actions/node-version@v3
+        uses: actions/setup-node@v3
       - name: verification of node version
         run: node --version
